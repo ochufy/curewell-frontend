@@ -1,0 +1,22 @@
+<div class="wrapper d-flex flex-column justify-content-center align-items-center w-100 h-75 m-0 p-0">
+  <p class="fs-3 fw-semibold">View Doctor</p>
+  <table class="table table-hover table-bordererd border-secondary w-50 text-center">
+    <thead>
+      <tr class="table-secondary">
+        <th scope="col">Doctor ID</th>
+        <th scope="col">Doctor Name</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let doctor of doctorList">
+        <td>{{doctor.doctorId}}</td>
+        <td>{{doctor.doctorName}}</td>
+        <td>
+          <button type="button" class="btn btn-outline-secondary btn-sm mx-2" (click)="onDoctorEdit(doctor)">Edit</button>
+          <button type="button" class="btn btn-outline-danger btn-sm mx-2" (click)="onDoctorDelete(doctor)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

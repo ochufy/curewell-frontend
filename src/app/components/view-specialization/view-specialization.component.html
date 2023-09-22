@@ -1,0 +1,21 @@
+<div class="wrapper d-flex flex-column justify-content-center align-items-center w-100 h-75 m-0 p-0">
+	<p class="fs-3 fw-semibold">View Specialization</p>
+	<table class="table table-hover table-bordererd border-secondary w-50 text-center">
+		<thead>
+			<tr class="table-secondary">
+				<th scope="col">Specialization Code</th>
+				<th scope="col">Specialization Name</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let specialization of specializationList">
+				<td>{{specialization.specializationCode}}</td>
+				<td>{{specialization.specializationName}}</td>
+				<td>
+					<button type="button" class="btn btn-outline-secondary btn-sm ">View Doctors</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
